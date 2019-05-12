@@ -109,4 +109,4 @@ venv.bak/
 *.json
 
 # Text train files
-*.txt
+data/**/*.txt

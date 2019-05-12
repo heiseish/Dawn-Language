@@ -1,0 +1,44 @@
+name: d
+channels:
+  - conda-forge
+  - soumith
+  - defaults
+dependencies:
+  - pip=19.1.1
+  - python=3.6.8
+  - tqdm
+  - pip:
+    - absl-py==0.7.1
+    - astor==0.7.1
+    - atomicwrites==1.3.0
+    - attrs==19.1.0
+    - gast==0.2.2
+    - google-pasta==0.1.6
+    - grpcio==1.20.1
+    - h5py==2.8.0
+    - keras==2.2.4
+    - keras-applications==1.0.7
+    - keras-preprocessing==1.0.9
+    - markdown==3.1
+    - more-itertools==7.0.0
+    - numpy==1.15.1
+    - pluggy==0.11.0
+    - protobuf==3.7.1
+    - py==1.8.0
+    - pytest==4.5.0
+    - pyyaml==5.1
+    - scipy==1.2.1
+    - six==1.11.0
+    - tb-nightly==1.14.0a20190301
+    - tensorflow==2.0.0a0
+    - tensorflow-estimator-2-0-preview==1.14.0.dev2019051100
+    - tensorflow-hub==0.3.0
+    - tensorflowjs==1.0.1
+    - termcolor==1.1.0
+    - tf-estimator-nightly==1.14.0.dev2019030115
+    - tf-nightly-2-0-preview==2.0.0.dev20190511
+    - wcwidth==0.1.7
+    - werkzeug==0.15.2
+    - wrapt==1.11.1
+prefix: /Users/heiseish/anaconda3/envs/d
+
