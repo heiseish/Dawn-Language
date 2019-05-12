@@ -35,6 +35,8 @@ checkpoint = ModelCheckpoint('model-{epoch:03d}.h5',
                              monitor='val_loss',
                              save_best_only=True,
                              mode='auto')
+
+
 model.fit(x_np_vector,
           y_np_vecotr,
           epochs=300,
