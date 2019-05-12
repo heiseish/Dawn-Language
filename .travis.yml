@@ -1,14 +1,11 @@
 # dist: xenial   # required for Python >= 3.7
 language: python
 python:
-  - "3.6-dev"
-os:
-  - osx
-osx_image: 
-  - xcode8.3
+  - "3.6"
+
 before_install:
 
-  - wget https://repo.continuum.io/archive/Anaconda3-2019.03-MacOSX-x86_64.sh -O Anaconda.sh
+  - wget https://repo.continuum.io/archive/Anaconda3-2019.03-Linux-x86_64.sh -O Anaconda.sh
   - chmod +x Anaconda.sh
   - ./Anaconda.sh -b
   - export PATH=/home/travis/anaconda3/bin:$PATH
@@ -19,7 +16,7 @@ install:
   # We just set up a conda environment with the right Python version. This
   # should not need changing.
 
-  - conda env create --yes -f environment.yml
+  - conda env create -f environment.yml
   
 
   # Below, include the dependencies you want to install with conda, optionally
