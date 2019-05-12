@@ -1,6 +1,6 @@
 # Dawn-Language
 
-
+[![Build Status](https://travis-ci.org/heiseish/Dawn-Language.svg?branch=master)](https://travis-ci.org/heiseish/Dawn-Language)
 [![Language](https://img.shields.io/static/v1.svg?label=Language&message=Python&color=informational&logo=Python)]([https://travis-ci.com/username/projectname](https://github.com/heiseish/MessagingRestServer))
 [![Python](https://img.shields.io/static/v1.svg?label=Python&message=3.6.0&color=success)]([https://travis-ci.com/username/projectname](https://github.com/heiseish/MessagingRestServer))
 [![Framework](https://img.shields.io/static/v1.svg?label=Framework&message=Anaconda&color=blueviolet&logo=Conda-Forge)]([https://travis-ci.com/username/projectname](https://github.com/heiseish/MessagingRestServer))
