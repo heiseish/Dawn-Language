@@ -9,7 +9,7 @@ before_install:
   - wget https://repo.continuum.io/archive/Anaconda3-2019.03-Linux-x86_64.sh -O Anaconda.sh
   - chmod +x Anaconda.sh
   - ./Anaconda.sh -b
-  - export PATH=/home/travis/anaconda/bin:$PATH
+  - export PATH=/home/travis/anaconda3/bin:$PATH
   - conda update --yes conda
 
 install:
@@ -17,7 +17,7 @@ install:
   # We just set up a conda environment with the right Python version. This
   # should not need changing.
 
-  - conda create --yes -n d python=$TRAVIS_PYTHON_VERSION 
+  - conda create --yes -n d python=3.6 
   - source activate test
 
   # Below, include the dependencies you want to install with conda, optionally
