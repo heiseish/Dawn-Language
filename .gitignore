@@ -102,3 +102,11 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+
+# Tensorflow model
+*.h5
+*.json
+
+# Text train files
+*.txt

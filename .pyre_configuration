@@ -1,0 +1,7 @@
+{
+  "binary": "/Users/heiseish/anaconda3/envs/d/bin/pyre.bin",
+  "source_directories": [
+    "."
+  ],
+  "typeshed": "/Users/heiseish/anaconda3/envs/d/lib/pyre_check/typeshed/"
+}
