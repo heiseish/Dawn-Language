@@ -4,6 +4,8 @@ python:
   - "3.6"
 os:
   - osx
+osx_image: 
+  - xcode8.3
 before_install:
 
   - wget https://repo.continuum.io/archive/Anaconda3-2019.03-MacOSX-x86_64.sh -O Anaconda.sh
