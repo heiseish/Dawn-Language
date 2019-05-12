@@ -6,7 +6,7 @@ before_install:
 
   # Here we just install Miniconda, which you shouldn't have to change.
 
-  - wget https://repo.continuum.io/anaconda/Anaconda-3.7.0-Linux-x86_64.sh -O ~/Anaconda.sh
+  - wget https://repo.continuum.io/archive/Anaconda3-2019.03-Linux-x86_64.sh -O ~/Anaconda.sh
   - chmod +x Anaconda.sh
   - ./Anaconda.sh -b
   - export PATH=/home/travis/anaconda/bin:$PATH
