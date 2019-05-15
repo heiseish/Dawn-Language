@@ -107,6 +107,8 @@ venv.bak/
 # Tensorflow model
 *.h5
 *.json
-
+models/
 # Text train files
 data/**/*.txt
+
+

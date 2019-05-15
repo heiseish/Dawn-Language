@@ -3,12 +3,15 @@ import unicodedata
 import string
 import glob
 import os
-from typing import List, Tuple
+import codecs
+import random
+from typing import List, Tuple, Any
 
 import tensorflow as tf
 import numpy as np
 
-from src.util.dawn_intent import map_intent_to_number
+from src.util import map_intent_to_number
+from src.modelling.bert import Tokenizer
 
 ALL_LETTER: str = string.ascii_letters + " .,;'"
 N_LETTERS: int = len(ALL_LETTER)
@@ -33,10 +36,10 @@ def find_files(path: str) -> List[str]:
 def unicode_to_ascii(sentence: str) -> str:
     ''' Convert unicode string to ascii string
     Args:
-			semntence (str): unicode string to convert
-	Returns:
-			srring: ascii character strings
-	'''
+                        semntence (str): unicode string to convert
+        Returns:
+                        srring: ascii character strings
+        '''
     return ''.join(c for c in unicodedata.normalize('NFD', sentence)
                    if unicodedata.category(c) != 'Mn' and c in ALL_LETTER)
 
@@ -44,74 +47,49 @@ def unicode_to_ascii(sentence: str) -> str:
 def read_lines(filename: str) -> List[str]:
     ''' Read lines from txt files.
     Returns:
-    		List[str]: Array in ASCII
+                List[str]: Array in ASCII
     '''
     lines = open(filename, encoding='utf-8').read().strip().split('\n')
     return [unicode_to_ascii(line) for line in lines]
 
 
-def letter_to_index(letter: str) -> int:
-    '''Convert letter to index. eg a -> 1. 0 is reserved for empty letter (for pad_sequence latter)
-    Args:
-    		letter (str): letter to be converted
-    Returns:
-    		Integer representing index.
-    '''
-    return ALL_LETTER.find(letter) + 1
-
-
-def sentence_to_index(sentence: List[str]) -> List[int]:
-    '''Convert sentence to array of letter index
-    Args:
-    		Sentence (List[str]): Sentence to be converted
-    Returns:
-    		List[int]: Array of indexes of each character in string
-    '''
-    return [letter_to_index(c) for c in sentence]
-
-
-def sentence_to_one_hot_vectors(sentence: List[int]) -> np.ndarray:
-    '''Convert sentence of indexes to array of one hot vector
-    Args:
-    		sentence (List[str]): Sentence to be convert
-    Returns:
-    		Array of one-hot vectors
-    '''
-    return tf.one_hot(sentence, N_LETTERS + 1)
-
-
-def embed(sentence: str) -> np.ndarray:
-    ''' Embed the string into 2-D np-array
-    Args:
-        X (str): string to be convert
-
-    Returns:
-        2-D np.ndarray
-    '''
-    sentence_lower_cased: str = sentence.lower()
-    sentence_indexes: List[int] = sentence_to_index(sentence_lower_cased)
-    sentence_one_hot_vector: np.ndarray = sentence_to_one_hot_vectors(
-        sentence_indexes)
-    to_concat = np.zeros((100 - len(sentence_one_hot_vector), N_LETTERS + 1))
-    res = np.empty((100, N_LETTERS + 1))
-    np.concatenate([sentence_one_hot_vector, to_concat], out=res)
-    return res
-
-
-def load_data() -> Tuple[List[List[int]], np.ndarray]:
+def load_data(dict_path: str,
+              max_len: int = 512) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
     ''' Get data from the text files and convert them to trainable data
+    Args:
+        dict_path: path to tokenizer dictionary
+        max_len: max len of the sentence that should be encoded
     Returns:
-        Vectorize data elements
+        Vectorized data elements
     '''
-    x_vector: List[int] = []
+    token_dict = {}
+    with codecs.open(dict_path, 'r', 'utf8') as reader:
+        for line in reader:
+            token = line.strip()
+            token_dict[token] = len(token_dict)
+    tokenizer = Tokenizer(token_dict)
+
+    x_tokens: List[np.ndarray] = []
+    x_segments: List[np.ndarray] = []
     y_vector: List[int] = []
     num_classes: int = 0
-    for filename in find_files('data/cases/*.txt'):
+
+    for filename in find_files(path='data/cases/*.txt'):
         num_classes += 1
         category: str = os.path.splitext(os.path.basename(filename))[0]
-        lines: List[str] = read_lines(filename)
+        lines: List[str] = read_lines(filename=filename)
         for line in lines:
-            x_vector.append(embed(line))
-            y_vector.append(map_intent_to_number(category))
-    new_y: np.ndarray = tf.keras.utils.to_categorical(y_vector)
-    return x_vector, new_y
+            indices, segments = tokenizer.encode(first=line, max_len=512)
+            x_tokens.append(indices)
+            x_segments.append(segments)
+            y_vector.append(map_intent_to_number(intent=category))
+
+    indices = list(range(len(x_tokens)))
+    random.shuffle(indices)
+    x_tokens_shuffled = [x_tokens[i] for i in indices]
+    x_segments_shuffled = [x_segments[i] for i in indices]
+    y_vector_shuffled = [y_vector[i] for i in indices]
+
+    y_final = tf.keras.utils.to_categorical(y_vector_shuffled)
+    return np.array(x_tokens_shuffled), np.array(x_segments_shuffled), np.array(
+        y_final)

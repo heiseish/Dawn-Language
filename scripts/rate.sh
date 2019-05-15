@@ -1,1 +1,1 @@
-pylint --rcfile .pylintrc src/
+pylint --rcfile .pylintrc src/*

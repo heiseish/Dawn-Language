@@ -1,0 +1,1 @@
+PYTHONPATH=./ python src/intent_classification.py

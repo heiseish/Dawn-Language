@@ -1,0 +1,1 @@
+PYTHONPATH=./ python src/product/predict.py $1

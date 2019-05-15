@@ -1,0 +1,2254 @@
+2019-05-12 14:42:58 INFO Running as pid: 5935
+2019-05-12 14:42:58 INFO Version: 572c522b65f918b895dedccfb95018035d0830d9
+2019-05-12 14:42:58 INFO Build info: Darwin x86_64 @ Fri May 03 2019 (development build)
+2019-05-12 14:42:58 INFO Connected to server
+2019-05-12 14:42:58 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "initialize",
+  "params": {
+    "processId": 5911,
+    "rootPath":
+      "/Users/heiseish/Projects/DLPlayground/DawnIntentClassification",
+    "rootUri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification",
+    "capabilities": {
+      "workspace": {
+        "applyEdit": true,
+        "didChangeConfiguration": { "dynamicRegistration": true },
+        "didChangeWatchedFiles": { "dynamicRegistration": true },
+        "symbol": { "dynamicRegistration": true },
+        "executeCommand": { "dynamicRegistration": true },
+        "workspaceFolders": true,
+        "configuration": true
+      },
+      "textDocument": {
+        "synchronization": {
+          "dynamicRegistration": true,
+          "willSave": true,
+          "willSaveWaitUntil": true,
+          "didSave": true
+        },
+        "completion": {
+          "dynamicRegistration": true,
+          "completionItem": {
+            "snippetSupport": true,
+            "commitCharactersSupport": true
+          }
+        },
+        "hover": { "dynamicRegistration": true },
+        "signatureHelp": { "dynamicRegistration": true },
+        "definition": { "dynamicRegistration": true },
+        "references": { "dynamicRegistration": true },
+        "documentHighlight": { "dynamicRegistration": true },
+        "documentSymbol": { "dynamicRegistration": true },
+        "codeAction": { "dynamicRegistration": true },
+        "codeLens": { "dynamicRegistration": true },
+        "formatting": { "dynamicRegistration": true },
+        "rangeFormatting": { "dynamicRegistration": true },
+        "onTypeFormatting": { "dynamicRegistration": true },
+        "rename": { "dynamicRegistration": true },
+        "documentLink": { "dynamicRegistration": true }
+      }
+    },
+    "trace": "off",
+    "workspaceFolders": [
+      {
+        "uri":
+          "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification",
+        "name": "DawnIntentClassification"
+      }
+    ]
+  }
+}
+
+2019-05-12 14:42:58 INFO Request method: initialize
+2019-05-12 14:42:58 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 0,
+  "result": {
+    "capabilities": {
+      "textDocumentSync": {
+        "openClose": true,
+        "change": 0,
+        "save": { "includeText": false }
+      },
+      "hoverProvider": true,
+      "definitionProvider": true,
+      "rageProvider": true
+    }
+  }
+}
+
+2019-05-12 14:42:58 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "initialized", "params": {} }
+
+2019-05-12 14:43:01 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/publishDiagnostics",
+  "params": {
+    "uri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/modelling/train.py",
+    "diagnostics": [
+      {
+        "range": {
+          "start": { "line": 22, "character": 14 },
+          "end": { "line": 22, "character": 19 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined name [18]: Global name `tensorflow` is not defined, or there is at least one control flow path that doesn't define `tensorflow`."
+      },
+      {
+        "range": {
+          "start": { "line": 8, "character": 0 },
+          "end": { "line": 8, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `numpy`."
+      },
+      {
+        "range": {
+          "start": { "line": 7, "character": 0 },
+          "end": { "line": 7, "character": 44 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow.keras.optimizers`."
+      },
+      {
+        "range": {
+          "start": { "line": 6, "character": 0 },
+          "end": { "line": 6, "character": 54 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow.keras.callbacks`."
+      },
+      {
+        "range": {
+          "start": { "line": 5, "character": 0 },
+          "end": { "line": 5, "character": 41 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow.keras.models`."
+      },
+      {
+        "range": {
+          "start": { "line": 4, "character": 0 },
+          "end": { "line": 4, "character": 78 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow.keras.layers`."
+      }
+    ]
+  }
+}
+
+2019-05-12 14:43:01 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/publishDiagnostics",
+  "params": {
+    "uri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py",
+    "diagnostics": [
+      {
+        "range": {
+          "start": { "line": 115, "character": 11 },
+          "end": { "line": 115, "character": 21 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 100, "character": 19 },
+          "end": { "line": 100, "character": 24 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 92, "character": 29 },
+          "end": { "line": 92, "character": 39 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 91, "character": 52 },
+          "end": { "line": 91, "character": 60 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Incompatible parameter type [6]: Expected `List[str]` for 1st parameter `sentence` to call `src.preprocess.extract.sentence_to_index` but got `str`."
+      },
+      {
+        "range": {
+          "start": { "line": 82, "character": 28 },
+          "end": { "line": 82, "character": 38 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 72, "character": 56 },
+          "end": { "line": 72, "character": 66 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 8, "character": 0 },
+          "end": { "line": 8, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `numpy`."
+      },
+      {
+        "range": {
+          "start": { "line": 7, "character": 0 },
+          "end": { "line": 7, "character": 23 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow`."
+      }
+    ]
+  }
+}
+
+2019-05-12 14:43:01 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/publishDiagnostics",
+  "params": {
+    "uri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/product/predict_keras.py",
+    "diagnostics": [
+      {
+        "range": {
+          "start": { "line": 6, "character": 8 },
+          "end": { "line": 6, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined name [18]: Global name `keras` is not defined, or there is at least one control flow path that doesn't define `keras`."
+      },
+      {
+        "range": {
+          "start": { "line": 4, "character": 0 },
+          "end": { "line": 4, "character": 20 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `encode`."
+      },
+      {
+        "range": {
+          "start": { "line": 2, "character": 0 },
+          "end": { "line": 2, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `numpy`."
+      },
+      {
+        "range": {
+          "start": { "line": 1, "character": 0 },
+          "end": { "line": 1, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `data`."
+      },
+      {
+        "range": {
+          "start": { "line": 0, "character": 0 },
+          "end": { "line": 0, "character": 35 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `keras.models`."
+      }
+    ]
+  }
+}
+
+2019-05-12 14:43:01 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/publishDiagnostics",
+  "params": {
+    "uri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/util/json_encoder.py",
+    "diagnostics": [
+      {
+        "range": {
+          "start": { "line": 7, "character": 17 },
+          "end": { "line": 7, "character": 20 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Invalid type [31]: Expression `any` is not a valid type."
+      },
+      {
+        "range": {
+          "start": { "line": 4, "character": 0 },
+          "end": { "line": 4, "character": 12 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `numpy`."
+      }
+    ]
+  }
+}
+
+2019-05-12 14:43:16 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py",
+      "languageId": "python",
+      "version": 1,
+      "text":
+        "''' Extract data from text files and generate trainable data '''\nimport unicodedata\nimport string\nimport glob\nimport os\nfrom typing import List, Tuple\n\nimport tensorflow as tf\nimport numpy as np\n\nfrom src.util.dawn_intent import map_intent_to_number\n\nALL_LETTER: str = string.ascii_letters + \" .,;'\"\nN_LETTERS: int = len(ALL_LETTER)\n\n\ndef find_files(path: str) -> List[str]:\n    ''' Return all files in the given path\n\n    Args:\n        path (str): path to the folder\n\n    Returns:\n        List[str]: list of filenames as string\n    '''\n    return glob.glob(path)\n\n\n# Turn a Unicode string to plain ASCII, thanks to\n# http://stackoverflow.com/a/518232/2809427\n\n\ndef unicode_to_ascii(sentence: str) -> str:\n    ''' Convert unicode string to ascii string\n    Args:\n\t\t\tsemntence (str): unicode string to convert\n\tReturns:\n\t\t\tsrring: ascii character strings\n\t'''\n    return ''.join(c for c in unicodedata.normalize('NFD', sentence)\n                   if unicodedata.category(c) != 'Mn' and c in ALL_LETTER)\n\n\ndef read_lines(filename: str) -> List[str]:\n    ''' Read lines from txt files.\n    Returns:\n    \t\tList[str]: Array in ASCII\n    '''\n    lines = open(filename, encoding='utf-8').read().strip().split('\\n')\n    return [unicode_to_ascii(line) for line in lines]\n\n\ndef letter_to_index(letter: str) -> int:\n    '''Convert letter to index. eg a -> 1. 0 is reserved for empty letter (for pad_sequence latter)\n    Args:\n    \t\tletter (str): letter to be converted\n    Returns:\n    \t\tInteger representing index.\n    '''\n    return ALL_LETTER.find(letter) + 1\n\n\ndef sentence_to_index(sentence: List[str]) -> List[int]:\n    '''Convert sentence to array of letter index\n    Args:\n    \t\tSentence (List[str]): Sentence to be converted\n    Returns:\n    \t\tList[int]: Array of indexes of each character in string\n    '''\n    return [letter_to_index(c) for c in sentence]\n\n\ndef sentence_to_one_hot_vectors(sentence: List[int]) -> np.ndarray:\n    '''Convert sentence of indexes to array of one hot vector\n    Args:\n    \t\tsentence (List[str]): Sentence to be convert\n    Returns:\n    \t\tArray of one-hot vectors\n    '''\n    return tf.one_hot(sentence, N_LETTERS + 1)\n\n\ndef embed(sentence: str) -> np.ndarray:\n    ''' Embed the string into 2-D np-array\n    Args:\n        X (str): string to be convert\n\n    Returns:\n        2-D np.ndarray\n    '''\n    sentence_lower_cased: str = sentence.lower()\n    sentence_indexes: List[int] = sentence_to_index(sentence=sentence_lower_cased)\n    sentence_one_hot_vector: np.ndarray = sentence_to_one_hot_vectors(\n        sentence=sentence_indexes)\n    to_concat = np.zeros((100 - len(sentence_one_hot_vector), N_LETTERS + 1))\n    res = np.empty((100, N_LETTERS + 1))\n    np.concatenate([sentence_one_hot_vector, to_concat], out=res)\n    return res\n\n\ndef load_data() -> Tuple[List[List[int]], np.ndarray]:\n    ''' Get data from the text files and convert them to trainable data\n    Returns:\n        Vectorize data elements\n    '''\n    x_vector: List[int] = []\n    y_vector: List[int] = []\n    num_classes: int = 0\n    for filename in find_files(path='data/cases/*.txt'):\n        num_classes += 1\n        category: str = os.path.splitext(os.path.basename(filename))[0]\n        lines: List[str] = read_lines(filename=filename)\n        for line in lines:\n            x_vector.append(embed(sentence=line))\n            y_vector.append(map_intent_to_number(intent=category))\n    new_y: np.ndarray = tf.keras.utils.to_categorical(y_vector)\n    return x_vector, new_y\n"
+    }
+  }
+}
+
+2019-05-12 14:43:16 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 32, "character": 18 }
+  }
+}
+
+2019-05-12 14:43:16 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 1 } }
+
+2019-05-12 14:43:16 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/publishDiagnostics",
+  "params": {
+    "uri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py",
+    "diagnostics": [
+      {
+        "range": {
+          "start": { "line": 115, "character": 11 },
+          "end": { "line": 115, "character": 21 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 100, "character": 19 },
+          "end": { "line": 100, "character": 24 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 92, "character": 29 },
+          "end": { "line": 92, "character": 39 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 91, "character": 52 },
+          "end": { "line": 91, "character": 60 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Incompatible parameter type [6]: Expected `List[str]` for 1st parameter `sentence` to call `src.preprocess.extract.sentence_to_index` but got `str`."
+      },
+      {
+        "range": {
+          "start": { "line": 82, "character": 28 },
+          "end": { "line": 82, "character": 38 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 72, "character": 56 },
+          "end": { "line": 72, "character": 66 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 8, "character": 0 },
+          "end": { "line": 8, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `numpy`."
+      },
+      {
+        "range": {
+          "start": { "line": 7, "character": 0 },
+          "end": { "line": 7, "character": 23 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow`."
+      }
+    ]
+  }
+}
+
+2019-05-12 14:43:16 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 1, "result": null }
+
+2019-05-12 14:43:20 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/product/predict_keras.py",
+      "languageId": "python",
+      "version": 1,
+      "text":
+        "from keras.models import load_model\nfrom data import *\nimport numpy as np\nimport json\nfrom encode import *\n\nmodel = load_model('model.h5')\n\n\ndef predict(s: string):\n    X = np.array([embed(s)])\n    y = model.predict(X)\n    y_in = np.argmax(y, axis=1)\n    y_ = [mapNumberToIntent(z) for z in y_in][0]\n    res = {}\n    res['confidence'] = y[0][y_in][0]\n    res['intent'] = y_\n    return res\n"
+    }
+  }
+}
+
+2019-05-12 14:43:20 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/publishDiagnostics",
+  "params": {
+    "uri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/product/predict_keras.py",
+    "diagnostics": [
+      {
+        "range": {
+          "start": { "line": 6, "character": 8 },
+          "end": { "line": 6, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined name [18]: Global name `keras` is not defined, or there is at least one control flow path that doesn't define `keras`."
+      },
+      {
+        "range": {
+          "start": { "line": 4, "character": 0 },
+          "end": { "line": 4, "character": 20 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `encode`."
+      },
+      {
+        "range": {
+          "start": { "line": 2, "character": 0 },
+          "end": { "line": 2, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `numpy`."
+      },
+      {
+        "range": {
+          "start": { "line": 1, "character": 0 },
+          "end": { "line": 1, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `data`."
+      },
+      {
+        "range": {
+          "start": { "line": 0, "character": 0 },
+          "end": { "line": 0, "character": 35 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `keras.models`."
+      }
+    ]
+  }
+}
+
+2019-05-12 14:43:20 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/product/predict_keras.py"
+    },
+    "position": { "line": 6, "character": 22 }
+  }
+}
+
+2019-05-12 14:43:20 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "result": {
+    "contents": "typing_extensions.Literal['model.h5']",
+    "range": {
+      "start": { "line": 6, "character": 19 },
+      "end": { "line": 6, "character": 29 }
+    }
+  }
+}
+
+2019-05-12 14:43:21 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/product/predict_keras.py"
+    },
+    "position": { "line": 0, "character": 12 }
+  }
+}
+
+2019-05-12 14:43:21 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 3, "result": null }
+
+2019-05-12 14:43:28 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 4,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 7, "character": 14 }
+  }
+}
+
+2019-05-12 14:43:28 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 4, "result": null }
+
+2019-05-12 14:43:31 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 5,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 8, "character": 3 }
+  }
+}
+
+2019-05-12 14:43:31 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 5 } }
+
+2019-05-12 14:43:31 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 5, "result": null }
+
+2019-05-12 14:43:31 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 6,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 7, "character": 3 }
+  }
+}
+
+2019-05-12 14:43:31 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 6, "result": null }
+
+2019-05-12 14:43:37 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 7,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 13, "character": 15 }
+  }
+}
+
+2019-05-12 14:43:37 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 7, "result": null }
+
+2019-05-12 14:43:37 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 8,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 16, "character": 11 }
+  }
+}
+
+2019-05-12 14:43:37 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 8, "result": null }
+
+2019-05-12 14:43:38 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 9,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 16, "character": 11 }
+  }
+}
+
+2019-05-12 14:43:38 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 9 } }
+
+2019-05-12 14:43:38 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 9, "result": null }
+
+2019-05-12 14:43:38 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 10,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 16, "character": 10 }
+  }
+}
+
+2019-05-12 14:43:39 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 10, "result": null }
+
+2019-05-12 14:43:41 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 11,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 115, "character": 24 }
+  }
+}
+
+2019-05-12 14:43:41 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 11 } }
+
+2019-05-12 14:43:41 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 11, "result": null }
+
+2019-05-12 14:43:41 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 12,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 115, "character": 28 }
+  }
+}
+
+2019-05-12 14:43:41 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 12, "result": null }
+
+2019-05-12 14:43:43 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 13,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 111, "character": 33 }
+  }
+}
+
+2019-05-12 14:43:43 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 13,
+  "result": {
+    "contents":
+      "typing.Callable(src.preprocess.extract.read_lines)[[Named(filename, str)], typing.List[str]]",
+    "range": {
+      "start": { "line": 111, "character": 27 },
+      "end": { "line": 111, "character": 37 }
+    }
+  }
+}
+
+2019-05-12 14:45:39 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 14,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 94, "character": 63 }
+  }
+}
+
+2019-05-12 14:45:39 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 14 } }
+
+2019-05-12 14:45:39 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 14,
+  "result": {
+    "contents": "int",
+    "range": {
+      "start": { "line": 94, "character": 62 },
+      "end": { "line": 94, "character": 71 }
+    }
+  }
+}
+
+2019-05-12 14:46:06 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 15,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 94, "character": 35 }
+  }
+}
+
+2019-05-12 14:46:07 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 15 } }
+
+2019-05-12 14:46:07 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 15, "result": null }
+
+2019-05-12 14:46:07 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 16,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 100, "character": 26 }
+  }
+}
+
+2019-05-12 14:46:07 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 16,
+  "result": {
+    "contents": "typing.TypeAlias",
+    "range": {
+      "start": { "line": 100, "character": 25 },
+      "end": { "line": 100, "character": 29 }
+    }
+  }
+}
+
+2019-05-12 14:46:08 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 17,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 100, "character": 10 }
+  }
+}
+
+2019-05-12 14:46:08 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 17, "result": null }
+
+2019-05-12 14:46:09 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 18,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 100, "character": 22 }
+  }
+}
+
+2019-05-12 14:46:10 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 18,
+  "result": {
+    "contents": "typing._SpecialForm",
+    "range": {
+      "start": { "line": 100, "character": 19 },
+      "end": { "line": 100, "character": 24 }
+    }
+  }
+}
+
+2019-05-12 14:46:14 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 19,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 101, "character": 52 }
+  }
+}
+
+2019-05-12 14:46:14 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 19,
+  "result": {
+    "contents":
+      "typing_extensions.Literal[' Get data from the text files and convert them to trainable data\n    Returns:\n        Vectorize data elements\n    ']",
+    "range": {
+      "start": { "line": 101, "character": 4 },
+      "end": { "line": 104, "character": 7 }
+    }
+  }
+}
+
+2019-05-12 14:46:15 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 19 } }
+
+2019-05-12 14:46:15 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 20,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 112, "character": 18 }
+  }
+}
+
+2019-05-12 14:46:15 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 20, "result": null }
+
+2019-05-12 14:46:15 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 20 } }
+
+2019-05-12 14:46:15 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 21,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 107, "character": 22 }
+  }
+}
+
+2019-05-12 14:46:15 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 21, "result": null }
+
+2019-05-12 14:46:16 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 22,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 100, "character": 45 }
+  }
+}
+
+2019-05-12 14:46:16 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 22, "result": null }
+
+2019-05-12 14:46:16 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 22 } }
+
+2019-05-12 14:46:16 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 23,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 100, "character": 42 }
+  }
+}
+
+2019-05-12 14:46:16 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 23, "result": null }
+
+2019-05-12 14:46:23 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 24,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 5, "character": 29 }
+  }
+}
+
+2019-05-12 14:46:23 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 24 } }
+
+2019-05-12 14:46:23 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 24, "result": null }
+
+2019-05-12 14:46:25 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/didSave",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py",
+      "version": 9
+    }
+  }
+}
+
+2019-05-12 14:46:25 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/publishDiagnostics",
+  "params": {
+    "uri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py",
+    "diagnostics": [
+      {
+        "range": {
+          "start": { "line": 115, "character": 11 },
+          "end": { "line": 115, "character": 21 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 100, "character": 19 },
+          "end": { "line": 100, "character": 24 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 91, "character": 52 },
+          "end": { "line": 91, "character": 60 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Incompatible parameter type [6]: Expected `List[str]` for 1st parameter `sentence` to call `src.preprocess.extract.sentence_to_index` but got `str`."
+      },
+      {
+        "range": {
+          "start": { "line": 82, "character": 28 },
+          "end": { "line": 82, "character": 38 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 72, "character": 56 },
+          "end": { "line": 72, "character": 66 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 8, "character": 0 },
+          "end": { "line": 8, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `numpy`."
+      },
+      {
+        "range": {
+          "start": { "line": 7, "character": 0 },
+          "end": { "line": 7, "character": 23 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow`."
+      }
+    ]
+  }
+}
+
+2019-05-12 14:46:25 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/publishDiagnostics",
+  "params": {
+    "uri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/modelling/train.py",
+    "diagnostics": [
+      {
+        "range": {
+          "start": { "line": 22, "character": 14 },
+          "end": { "line": 22, "character": 19 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined name [18]: Global name `tensorflow` is not defined, or there is at least one control flow path that doesn't define `tensorflow`."
+      },
+      {
+        "range": {
+          "start": { "line": 8, "character": 0 },
+          "end": { "line": 8, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `numpy`."
+      },
+      {
+        "range": {
+          "start": { "line": 7, "character": 0 },
+          "end": { "line": 7, "character": 44 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow.keras.optimizers`."
+      },
+      {
+        "range": {
+          "start": { "line": 6, "character": 0 },
+          "end": { "line": 6, "character": 54 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow.keras.callbacks`."
+      },
+      {
+        "range": {
+          "start": { "line": 5, "character": 0 },
+          "end": { "line": 5, "character": 41 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow.keras.models`."
+      },
+      {
+        "range": {
+          "start": { "line": 4, "character": 0 },
+          "end": { "line": 4, "character": 78 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow.keras.layers`."
+      }
+    ]
+  }
+}
+
+2019-05-12 14:46:25 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/publishDiagnostics",
+  "params": {
+    "uri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py",
+    "diagnostics": [
+      {
+        "range": {
+          "start": { "line": 115, "character": 11 },
+          "end": { "line": 115, "character": 21 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 100, "character": 19 },
+          "end": { "line": 100, "character": 24 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 91, "character": 52 },
+          "end": { "line": 91, "character": 60 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Incompatible parameter type [6]: Expected `List[str]` for 1st parameter `sentence` to call `src.preprocess.extract.sentence_to_index` but got `str`."
+      },
+      {
+        "range": {
+          "start": { "line": 82, "character": 28 },
+          "end": { "line": 82, "character": 38 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 72, "character": 56 },
+          "end": { "line": 72, "character": 66 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message": "Undefined type [11]: Type `np.ndarray` is not defined."
+      },
+      {
+        "range": {
+          "start": { "line": 8, "character": 0 },
+          "end": { "line": 8, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `numpy`."
+      },
+      {
+        "range": {
+          "start": { "line": 7, "character": 0 },
+          "end": { "line": 7, "character": 23 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow`."
+      }
+    ]
+  }
+}
+
+2019-05-12 14:46:27 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 25,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 100, "character": 21 }
+  }
+}
+
+2019-05-12 14:46:27 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 25,
+  "result": {
+    "contents": "typing._SpecialForm",
+    "range": {
+      "start": { "line": 100, "character": 19 },
+      "end": { "line": 100, "character": 24 }
+    }
+  }
+}
+
+2019-05-12 14:46:33 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 26,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 115, "character": 16 }
+  }
+}
+
+2019-05-12 14:46:33 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 26, "result": null }
+
+2019-05-12 14:46:34 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 27,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 111, "character": 34 }
+  }
+}
+
+2019-05-12 14:46:34 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 27 } }
+
+2019-05-12 14:46:34 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 27,
+  "result": {
+    "contents":
+      "typing.Callable(src.preprocess.extract.read_lines)[[Named(filename, str)], typing.List[str]]",
+    "range": {
+      "start": { "line": 111, "character": 27 },
+      "end": { "line": 111, "character": 37 }
+    }
+  }
+}
+
+2019-05-12 14:46:34 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 28,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 114, "character": 25 }
+  }
+}
+
+2019-05-12 14:46:35 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 28 } }
+
+2019-05-12 14:46:35 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 28, "result": null }
+
+2019-05-12 14:46:35 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 29,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 115, "character": 21 }
+  }
+}
+
+2019-05-12 14:46:35 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 29, "result": null }
+
+2019-05-12 14:46:36 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 30,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 115, "character": 11 }
+  }
+}
+
+2019-05-12 14:46:36 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 30, "result": null }
+
+2019-05-12 14:46:39 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 31,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 110, "character": 16 }
+  }
+}
+
+2019-05-12 14:46:39 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 31 } }
+
+2019-05-12 14:46:39 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 31, "result": null }
+
+2019-05-12 14:46:40 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 32,
+  "method": "textDocument/definition",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 105, "character": 21 }
+  }
+}
+
+2019-05-12 14:46:40 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/didSave",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py",
+      "version": 12
+    }
+  }
+}
+
+2019-05-12 14:46:40 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 32,
+  "result": [
+    {
+      "uri":
+        "file:///Users/heiseish/anaconda3/envs/d/lib/pyre_check/typeshed/stdlib/2and3/builtins.pyi",
+      "range": {
+        "start": { "line": 129, "character": 0 },
+        "end": { "line": 205, "character": 35 }
+      }
+    }
+  ]
+}
+
+2019-05-12 14:46:40 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 32 } }
+
+2019-05-12 14:46:40 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/publishDiagnostics",
+  "params": {
+    "uri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py",
+    "diagnostics": [
+      {
+        "range": {
+          "start": { "line": 116, "character": 4 },
+          "end": { "line": 116, "character": 19 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Incompatible return type [7]: Expected `typing.Tuple[List[List[int]], typing.Any]` but got `typing.Tuple[List[int], typing.Any]`.\nType `typing.Tuple[List[List[int]], typing.Any]` expected on line 117, specified on line 101."
+      },
+      {
+        "range": {
+          "start": { "line": 91, "character": 52 },
+          "end": { "line": 91, "character": 60 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Incompatible parameter type [6]: Expected `List[str]` for 1st parameter `sentence` to call `src.preprocess.extract.sentence_to_index` but got `str`."
+      },
+      {
+        "range": {
+          "start": { "line": 8, "character": 0 },
+          "end": { "line": 8, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `numpy`."
+      },
+      {
+        "range": {
+          "start": { "line": 7, "character": 0 },
+          "end": { "line": 7, "character": 23 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow`."
+      }
+    ]
+  }
+}
+
+2019-05-12 14:46:40 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 33,
+  "method": "textDocument/definition",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 101, "character": 25 }
+  }
+}
+
+2019-05-12 14:46:40 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/publishDiagnostics",
+  "params": {
+    "uri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/modelling/train.py",
+    "diagnostics": [
+      {
+        "range": {
+          "start": { "line": 22, "character": 14 },
+          "end": { "line": 22, "character": 19 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined name [18]: Global name `tensorflow` is not defined, or there is at least one control flow path that doesn't define `tensorflow`."
+      },
+      {
+        "range": {
+          "start": { "line": 8, "character": 0 },
+          "end": { "line": 8, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `numpy`."
+      },
+      {
+        "range": {
+          "start": { "line": 7, "character": 0 },
+          "end": { "line": 7, "character": 44 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow.keras.optimizers`."
+      },
+      {
+        "range": {
+          "start": { "line": 6, "character": 0 },
+          "end": { "line": 6, "character": 54 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow.keras.callbacks`."
+      },
+      {
+        "range": {
+          "start": { "line": 5, "character": 0 },
+          "end": { "line": 5, "character": 41 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow.keras.models`."
+      },
+      {
+        "range": {
+          "start": { "line": 4, "character": 0 },
+          "end": { "line": 4, "character": 78 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow.keras.layers`."
+      }
+    ]
+  }
+}
+
+2019-05-12 14:46:40 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 33 } }
+
+2019-05-12 14:46:40 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 34,
+  "method": "textDocument/definition",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 100, "character": 24 }
+  }
+}
+
+2019-05-12 14:46:40 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 34 } }
+
+2019-05-12 14:46:40 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 35,
+  "method": "textDocument/definition",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 100, "character": 23 }
+  }
+}
+
+2019-05-12 14:46:40 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/publishDiagnostics",
+  "params": {
+    "uri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py",
+    "diagnostics": [
+      {
+        "range": {
+          "start": { "line": 116, "character": 4 },
+          "end": { "line": 116, "character": 19 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Incompatible return type [7]: Expected `typing.Tuple[List[List[int]], typing.Any]` but got `typing.Tuple[List[int], typing.Any]`.\nType `typing.Tuple[List[List[int]], typing.Any]` expected on line 117, specified on line 101."
+      },
+      {
+        "range": {
+          "start": { "line": 91, "character": 52 },
+          "end": { "line": 91, "character": 60 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Incompatible parameter type [6]: Expected `List[str]` for 1st parameter `sentence` to call `src.preprocess.extract.sentence_to_index` but got `str`."
+      },
+      {
+        "range": {
+          "start": { "line": 8, "character": 0 },
+          "end": { "line": 8, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `numpy`."
+      },
+      {
+        "range": {
+          "start": { "line": 7, "character": 0 },
+          "end": { "line": 7, "character": 23 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow`."
+      }
+    ]
+  }
+}
+
+2019-05-12 14:46:40 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 36,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 100, "character": 23 }
+  }
+}
+
+2019-05-12 14:46:40 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 33, "result": [] }
+
+2019-05-12 14:46:40 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 34, "result": [] }
+
+2019-05-12 14:46:40 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 36 } }
+
+2019-05-12 14:46:40 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 35,
+  "result": [
+    {
+      "uri":
+        "file:///Users/heiseish/anaconda3/envs/d/lib/pyre_check/typeshed/stdlib/3/typing.pyi",
+      "range": {
+        "start": { "line": 19, "character": 0 },
+        "end": { "line": 19, "character": 5 }
+      }
+    }
+  ]
+}
+
+2019-05-12 14:46:40 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 36,
+  "result": {
+    "contents": "typing._SpecialForm",
+    "range": {
+      "start": { "line": 100, "character": 19 },
+      "end": { "line": 100, "character": 24 }
+    }
+  }
+}
+
+2019-05-12 14:46:40 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/anaconda3/envs/d/lib/pyre_check/typeshed/stdlib/3/typing.pyi",
+      "languageId": "python",
+      "version": 1,
+      "text":
+        "# Stubs for typing\n\nimport sys\nfrom abc import abstractmethod, ABCMeta\nfrom types import CodeType, FrameType, TracebackType\nimport collections  # Needed by aliases like DefaultDict, see mypy issue 2986\n\n# Definitions of special type checking related constructs.  Their definition\n# are not used, so their value does not matter.\n\noverload = object()\nAny = object()\nTypeVar = object()\n_promote = object()\nno_type_check = object()\n\nclass _SpecialForm:\n    def __getitem__(self, typeargs: Any) -> Any: ...\n\nTuple: _SpecialForm = ...\nGeneric: _SpecialForm = ...\nProtocol: _SpecialForm = ...\nCallable: _SpecialForm = ...\nType: _SpecialForm = ...\nClassVar: _SpecialForm = ...\n\nclass GenericMeta(type): ...\n\n# Return type that indicates a function does not return.\n# This type is equivalent to the None type, but the no-op Union is necessary to\n# distinguish the None type from the None value.\nNoReturn = Union[None]\n\n# Type aliases and type constructors\n\nclass TypeAlias:\n    # Class for defining generic aliases for library types.\n    def __init__(self, target_type: type) -> None: ...\n    def __getitem__(self, typeargs: Any) -> Any: ...\n\nUnion = TypeAlias(object)\nOptional = TypeAlias(object)\nList = TypeAlias(object)\nDict = TypeAlias(object)\nDefaultDict = TypeAlias(object)\nSet = TypeAlias(object)\nFrozenSet = TypeAlias(object)\nCounter = TypeAlias(object)\nDeque = TypeAlias(object)\nChainMap = TypeAlias(object)\n\n# Predefined type variables.\nAnyStr = TypeVar('AnyStr', str, bytes)\n\n# Abstract base classes.\n\n# These type variables are used by the container types.\n_T = TypeVar('_T')\n_S = TypeVar('_S')\n_KT = TypeVar('_KT')  # Key type.\n_VT = TypeVar('_VT')  # Value type.\n_T_co = TypeVar('_T_co', covariant=True)  # Any type covariant containers.\n_V_co = TypeVar('_V_co', covariant=True)  # Any type covariant containers.\n_KT_co = TypeVar('_KT_co', covariant=True)  # Key type covariant containers.\n_VT_co = TypeVar('_VT_co', covariant=True)  # Value type covariant containers.\n_T_contra = TypeVar('_T_contra', contravariant=True)  # Ditto contravariant.\n_TC = TypeVar('_TC', bound=Type[object])\n_C = TypeVar(\"_C\", bound=Callable)\n\ndef runtime(cls: _TC) -> _TC: ...\n\n@runtime\nclass SupportsInt(Protocol, metaclass=ABCMeta):\n    @abstractmethod\n    def __int__(self) -> int: ...\n\n@runtime\nclass SupportsFloat(Protocol, metaclass=ABCMeta):\n    @abstractmethod\n    def __float__(self) -> float: ...\n\n@runtime\nclass SupportsComplex(Protocol, metaclass=ABCMeta):\n    @abstractmethod\n    def __complex__(self) -> complex: ...\n\n@runtime\nclass SupportsBytes(Protocol, metaclass=ABCMeta):\n    @abstractmethod\n    def __bytes__(self) -> bytes: ...\n\n@runtime\nclass SupportsAbs(Protocol[_T_co]):\n    @abstractmethod\n    def __abs__(self) -> _T_co: ...\n\n@runtime\nclass SupportsRound(Protocol[_T_co]):\n    @overload\n    @abstractmethod\n    def __round__(self) -> int: ...\n    @overload\n    @abstractmethod\n    def __round__(self, ndigits: int) -> _T_co: ...\n\n@runtime\nclass Reversible(Protocol[_T_co]):\n    @abstractmethod\n    def __reversed__(self) -> Iterator[_T_co]: ...\n\n@runtime\nclass Sized(Protocol, metaclass=ABCMeta):\n    @abstractmethod\n    def __len__(self) -> int: ...\n\n@runtime\nclass Hashable(Protocol, metaclass=ABCMeta):\n    # TODO: This is special, in that a subclass of a hashable class may not be hashable\n    #   (for example, list vs. object). It's not obvious how to represent this. This class\n    #   is currently mostly useless for static checking.\n    @abstractmethod\n    def __hash__(self) -> int: ...\n\n@runtime\nclass Iterable(Protocol[_T_co]):\n    @abstractmethod\n    def __iter__(self) -> Iterator[_T_co]: ...\n\n@runtime\nclass Iterator(Iterable[_T_co], Protocol[_T_co]):\n    @abstractmethod\n    def __next__(self) -> _T_co: ...\n    def __iter__(self) -> Iterator[_T_co]: ...\n\nclass Generator(Iterator[_T_co], Generic[_T_co, _T_contra, _V_co]):\n    @abstractmethod\n    def __next__(self) -> _T_co: ...\n\n    @abstractmethod\n    def send(self, value: _T_contra) -> _T_co: ...\n\n    @abstractmethod\n    def throw(self, typ: Type[BaseException], val: Optional[BaseException] = ...,\n              tb: Optional[TracebackType] = ...) -> _T_co: ...\n\n    @abstractmethod\n    def close(self) -> None: ...\n\n    @abstractmethod\n    def __iter__(self) -> Generator[_T_co, _T_contra, _V_co]: ...\n\n    @property\n    def gi_code(self) -> CodeType: ...\n    @property\n    def gi_frame(self) -> FrameType: ...\n    @property\n    def gi_running(self) -> bool: ...\n    @property\n    def gi_yieldfrom(self) -> Optional[Generator]: ...\n\n# TODO: Several types should only be defined if sys.python_version >= (3, 5):\n# Awaitable, AsyncIterator, AsyncIterable, Coroutine, Collection.\n# See https: //github.com/python/typeshed/issues/655 for why this is not easy.\n\n@runtime\nclass Awaitable(Protocol[_T_co]):\n    @abstractmethod\n    def __await__(self) -> Generator[Any, None, _T_co]: ...\n\nclass Coroutine(Awaitable[_V_co], Generic[_T_co, _T_contra, _V_co]):\n    @property\n    def cr_await(self) -> Optional[Any]: ...\n    @property\n    def cr_code(self) -> CodeType: ...\n    @property\n    def cr_frame(self) -> FrameType: ...\n    @property\n    def cr_running(self) -> bool: ...\n\n    @abstractmethod\n    def send(self, value: _T_contra) -> _T_co: ...\n\n    @abstractmethod\n    def throw(self, typ: Type[BaseException], val: Optional[BaseException] = ...,\n              tb: Optional[TracebackType] = ...) -> _T_co: ...\n\n    @abstractmethod\n    def close(self) -> None: ...\n\n\n# NOTE: This type does not exist in typing.py or PEP 484.\n# The parameters correspond to Generator, but the 4th is the original type.\nclass AwaitableGenerator(Awaitable[_V_co], Generator[_T_co, _T_contra, _V_co],\n                         Generic[_T_co, _T_contra, _V_co, _S], metaclass=ABCMeta): ...\n\n@runtime\nclass AsyncIterable(Protocol[_T_co]):\n    @abstractmethod\n    def __aiter__(self) -> AsyncIterator[_T_co]: ...\n\n@runtime\nclass AsyncIterator(AsyncIterable[_T_co],\n                    Protocol[_T_co]):\n    @abstractmethod\n    def __anext__(self) -> Awaitable[_T_co]: ...\n    def __aiter__(self) -> AsyncIterator[_T_co]: ...\n\nif sys.version_info >= (3, 6):\n    class AsyncGenerator(AsyncIterator[_T_co], Generic[_T_co, _T_contra]):\n        @abstractmethod\n        def __anext__(self) -> Awaitable[_T_co]: ...\n\n        @abstractmethod\n        def asend(self, value: _T_contra) -> Awaitable[_T_co]: ...\n\n        @abstractmethod\n        def athrow(self, typ: Type[BaseException], val: Optional[BaseException] = ...,\n                   tb: Any = ...) -> Awaitable[_T_co]: ...\n\n        @abstractmethod\n        def aclose(self) -> Awaitable[None]: ...\n\n        @abstractmethod\n        def __aiter__(self) -> AsyncGenerator[_T_co, _T_contra]: ...\n\n        @property\n        def ag_await(self) -> Any: ...\n        @property\n        def ag_code(self) -> CodeType: ...\n        @property\n        def ag_frame(self) -> FrameType: ...\n        @property\n        def ag_running(self) -> bool: ...\n\n@runtime\nclass Container(Protocol[_T_co]):\n    @abstractmethod\n    def __contains__(self, x: object) -> bool: ...\n\n\nif sys.version_info >= (3, 6):\n    @runtime\n    class Collection(Iterable[_T_co], Container[_T_co], Protocol[_T_co]):\n        # Implement Sized (but don't have it as a base class).\n        @abstractmethod\n        def __len__(self) -> int: ...\n\n    _Collection = Collection\nelse:\n    @runtime\n    class _Collection(Iterable[_T_co], Container[_T_co], Protocol[_T_co]):\n        # Implement Sized (but don't have it as a base class).\n        @abstractmethod\n        def __len__(self) -> int: ...\n\nclass Sequence(_Collection[_T_co], Reversible[_T_co], Generic[_T_co]):\n    @overload\n    @abstractmethod\n    def __getitem__(self, i: int) -> _T_co: ...\n    @overload\n    @abstractmethod\n    def __getitem__(self, s: slice) -> Sequence[_T_co]: ...\n    # Mixin methods\n    if sys.version_info >= (3, 5):\n        def index(self, x: Any, start: int = ..., end: int = ...) -> int: ...\n    else:\n        def index(self, x: Any) -> int: ...\n    def count(self, x: Any) -> int: ...\n    def __contains__(self, x: object) -> bool: ...\n    def __iter__(self) -> Iterator[_T_co]: ...\n    def __reversed__(self) -> Iterator[_T_co]: ...\n\nclass MutableSequence(Sequence[_T], Generic[_T]):\n    @abstractmethod\n    def insert(self, index: int, object: _T) -> None: ...\n    @overload\n    @abstractmethod\n    def __getitem__(self, i: int) -> _T: ...\n    @overload\n    @abstractmethod\n    def __getitem__(self, s: slice) -> MutableSequence[_T]: ...\n    @overload\n    @abstractmethod\n    def __setitem__(self, i: int, o: _T) -> None: ...\n    @overload\n    @abstractmethod\n    def __setitem__(self, s: slice, o: Iterable[_T]) -> None: ...\n    @overload\n    @abstractmethod\n    def __delitem__(self, i: int) -> None: ...\n    @overload\n    @abstractmethod\n    def __delitem__(self, i: slice) -> None: ...\n    # Mixin methods\n    def append(self, object: _T) -> None: ...\n    def clear(self) -> None: ...\n    def extend(self, iterable: Iterable[_T]) -> None: ...\n    def reverse(self) -> None: ...\n    def pop(self, index: int = ...) -> _T: ...\n    def remove(self, object: _T) -> None: ...\n    def __iadd__(self, x: Iterable[_T]) -> MutableSequence[_T]: ...\n\nclass AbstractSet(_Collection[_T_co], Generic[_T_co]):\n    @abstractmethod\n    def __contains__(self, x: object) -> bool: ...\n    # Mixin methods\n    def __le__(self, s: AbstractSet[Any]) -> bool: ...\n    def __lt__(self, s: AbstractSet[Any]) -> bool: ...\n    def __gt__(self, s: AbstractSet[Any]) -> bool: ...\n    def __ge__(self, s: AbstractSet[Any]) -> bool: ...\n    def __and__(self, s: AbstractSet[Any]) -> AbstractSet[_T_co]: ...\n    def __or__(self, s: AbstractSet[_T]) -> AbstractSet[Union[_T_co, _T]]: ...\n    def __sub__(self, s: AbstractSet[Any]) -> AbstractSet[_T_co]: ...\n    def __xor__(self, s: AbstractSet[_T]) -> AbstractSet[Union[_T_co, _T]]: ...\n    # TODO: Argument can be a more general ABC?\n    def isdisjoint(self, s: AbstractSet[Any]) -> bool: ...\n\nclass MutableSet(AbstractSet[_T], Generic[_T]):\n    @abstractmethod\n    def add(self, x: _T) -> None: ...\n    @abstractmethod\n    def discard(self, x: _T) -> None: ...\n    # Mixin methods\n    def clear(self) -> None: ...\n    def pop(self) -> _T: ...\n    def remove(self, element: _T) -> None: ...\n    def __ior__(self, s: AbstractSet[_S]) -> MutableSet[Union[_T, _S]]: ...\n    def __iand__(self, s: AbstractSet[Any]) -> MutableSet[_T]: ...\n    def __ixor__(self, s: AbstractSet[_S]) -> MutableSet[Union[_T, _S]]: ...\n    def __isub__(self, s: AbstractSet[Any]) -> MutableSet[_T]: ...\n\nclass MappingView:\n    def __len__(self) -> int: ...\n\nclass ItemsView(MappingView, AbstractSet[Tuple[_KT_co, _VT_co]], Generic[_KT_co, _VT_co]):\n    def __and__(self, o: Iterable[_T]) -> AbstractSet[Union[Tuple[_KT_co, _VT_co], _T]]: ...\n    def __contains__(self, o: object) -> bool: ...\n    def __iter__(self) -> Iterator[Tuple[_KT_co, _VT_co]]: ...\n    def __or__(self, o: Iterable[_T]) -> AbstractSet[Union[Tuple[_KT_co, _VT_co], _T]]: ...\n    def __xor__(self, o: Iterable[_T]) -> AbstractSet[Union[Tuple[_KT_co, _VT_co], _T]]: ...\n\nclass KeysView(MappingView, AbstractSet[_KT_co], Generic[_KT_co]):\n    def __and__(self, o: Iterable[_T]) -> AbstractSet[Union[_KT_co, _T]]: ...\n    def __contains__(self, o: object) -> bool: ...\n    def __iter__(self) -> Iterator[_KT_co]: ...\n    def __or__(self, o: Iterable[_T]) -> AbstractSet[Union[_KT_co, _T]]: ...\n    def __xor__(self, o: Iterable[_T]) -> AbstractSet[Union[_KT_co, _T]]: ...\n\nclass ValuesView(MappingView, Iterable[_VT_co], Generic[_VT_co]):\n    def __contains__(self, o: object) -> bool: ...\n    def __iter__(self) -> Iterator[_VT_co]: ...\n\n@runtime\nclass ContextManager(Protocol[_T_co]):\n    def __enter__(self) -> _T_co: ...\n    def __exit__(self, exc_type: Optional[Type[BaseException]],\n                 exc_value: Optional[BaseException],\n                 traceback: Optional[TracebackType]) -> Optional[bool]: ...\n\nif sys.version_info >= (3, 5):\n    @runtime\n    class AsyncContextManager(Protocol[_T_co]):\n        def __aenter__(self) -> Awaitable[_T_co]: ...\n        def __aexit__(self, exc_type: Optional[Type[BaseException]],\n                      exc_value: Optional[BaseException],\n                      traceback: Optional[TracebackType]) -> Awaitable[Optional[bool]]: ...\n\nclass Mapping(_Collection[_KT], Generic[_KT, _VT_co]):\n    # TODO: We wish the key type could also be covariant, but that doesn't work,\n    # see discussion in https: //github.com/python/typing/pull/273.\n    @abstractmethod\n    def __getitem__(self, k: _KT) -> _VT_co:\n        ...\n    # Mixin methods\n    @overload\n    def get(self, k: _KT) -> Optional[_VT_co]: ...\n    @overload\n    def get(self, k: _KT, default: Union[_VT_co, _T]) -> Union[_VT_co, _T]: ...\n    def items(self) -> AbstractSet[Tuple[_KT, _VT_co]]: ...\n    def keys(self) -> AbstractSet[_KT]: ...\n    def values(self) -> ValuesView[_VT_co]: ...\n    def __contains__(self, o: object) -> bool: ...\n\nclass MutableMapping(Mapping[_KT, _VT], Generic[_KT, _VT]):\n    @abstractmethod\n    def __setitem__(self, k: _KT, v: _VT) -> None: ...\n    @abstractmethod\n    def __delitem__(self, v: _KT) -> None: ...\n\n    def clear(self) -> None: ...\n    @overload\n    def pop(self, k: _KT) -> _VT: ...\n    @overload\n    def pop(self, k: _KT, default: Union[_VT, _T] = ...) -> Union[_VT, _T]: ...\n    def popitem(self) -> Tuple[_KT, _VT]: ...\n    def setdefault(self, k: _KT, default: _VT = ...) -> _VT: ...\n    # 'update' used to take a Union, but using overloading is better.\n    # The second overloaded type here is a bit too general, because\n    # Mapping[Tuple[_KT, _VT], W] is a subclass of Iterable[Tuple[_KT, _VT]],\n    # but will always have the behavior of the first overloaded type\n    # at runtime, leading to keys of a mix of types _KT and Tuple[_KT, _VT].\n    # We don't currently have any way of forcing all Mappings to use\n    # the first overload, but by using overloading rather than a Union,\n    # mypy will commit to using the first overload when the argument is\n    # known to be a Mapping with unknown type parameters, which is closer\n    # to the behavior we want. See mypy issue  #1430.\n    @overload\n    def update(self, __m: Mapping[_KT, _VT], **kwargs: _VT) -> None: ...\n    @overload\n    def update(self, __m: Iterable[Tuple[_KT, _VT]], **kwargs: _VT) -> None: ...\n    @overload\n    def update(self, **kwargs: _VT) -> None: ...\n\nText = str\n\nTYPE_CHECKING = True\n\nclass IO(Iterator[AnyStr], Generic[AnyStr]):\n    # TODO detach\n    # TODO use abstract properties\n    @property\n    def mode(self) -> str: ...\n    @property\n    def name(self) -> str: ...\n    @abstractmethod\n    def close(self) -> None: ...\n    @property\n    def closed(self) -> bool: ...\n    @abstractmethod\n    def fileno(self) -> int: ...\n    @abstractmethod\n    def flush(self) -> None: ...\n    @abstractmethod\n    def isatty(self) -> bool: ...\n    # TODO what if n is None?\n    @abstractmethod\n    def read(self, n: int = ...) -> AnyStr: ...\n    @abstractmethod\n    def readable(self) -> bool: ...\n    @abstractmethod\n    def readline(self, limit: int = ...) -> AnyStr: ...\n    @abstractmethod\n    def readlines(self, hint: int = ...) -> list[AnyStr]: ...\n    @abstractmethod\n    def seek(self, offset: int, whence: int = ...) -> int: ...\n    @abstractmethod\n    def seekable(self) -> bool: ...\n    @abstractmethod\n    def tell(self) -> int: ...\n    @abstractmethod\n    def truncate(self, size: Optional[int] = ...) -> int: ...\n    @abstractmethod\n    def writable(self) -> bool: ...\n    # TODO buffer objects\n    @abstractmethod\n    def write(self, s: AnyStr) -> int: ...\n    @abstractmethod\n    def writelines(self, lines: Iterable[AnyStr]) -> None: ...\n\n    @abstractmethod\n    def __next__(self) -> AnyStr: ...\n    @abstractmethod\n    def __iter__(self) -> Iterator[AnyStr]: ...\n    @abstractmethod\n    def __enter__(self) -> IO[AnyStr]: ...\n    @abstractmethod\n    def __exit__(self, t: Optional[Type[BaseException]], value: Optional[BaseException],\n                 traceback: Optional[TracebackType]) -> bool: ...\n\nclass BinaryIO(IO[bytes]):\n    # TODO readinto\n    # TODO read1?\n    # TODO peek?\n    @overload\n    @abstractmethod\n    def write(self, s: bytearray) -> int: ...\n    @overload\n    @abstractmethod\n    def write(self, s: bytes) -> int: ...\n\n    @abstractmethod\n    def __enter__(self) -> BinaryIO: ...\n\nclass TextIO(IO[str]):\n    # TODO use abstractproperty\n    @property\n    def buffer(self) -> BinaryIO: ...\n    @property\n    def encoding(self) -> str: ...\n    @property\n    def errors(self) -> Optional[str]: ...\n    @property\n    def line_buffering(self) -> int: ...  # int on PyPy, bool on CPython\n    @property\n    def newlines(self) -> Any: ...  # None, str or tuple\n    @abstractmethod\n    def __enter__(self) -> TextIO: ...\n\nclass ByteString(Sequence[int], metaclass=ABCMeta): ...\n\nclass Match(Generic[AnyStr]):\n    pos = 0\n    endpos = 0\n    lastindex = 0\n    lastgroup: AnyStr\n    string: AnyStr\n\n    # The regular expression object whose match() or search() method produced\n    # this match instance.\n    re: Pattern[AnyStr]\n\n    def expand(self, template: AnyStr) -> AnyStr: ...\n\n    @overload\n    def group(self, group1: int = ...) -> AnyStr: ...\n    @overload\n    def group(self, group1: str) -> AnyStr: ...\n    @overload\n    def group(self, group1: int, group2: int,\n              *groups: int) -> Sequence[AnyStr]: ...\n    @overload\n    def group(self, group1: str, group2: str,\n              *groups: str) -> Sequence[AnyStr]: ...\n\n    def groups(self, default: AnyStr = ...) -> Sequence[AnyStr]: ...\n    def groupdict(self, default: AnyStr = ...) -> dict[str, AnyStr]: ...\n    def start(self, group: Union[int, str] = ...) -> int: ...\n    def end(self, group: Union[int, str] = ...) -> int: ...\n    def span(self, group: Union[int, str] = ...) -> Tuple[int, int]: ...\n    if sys.version_info >= (3, 6):\n        def __getitem__(self, g: Union[int, str]) -> AnyStr: ...\n\nclass Pattern(Generic[AnyStr]):\n    flags = 0\n    groupindex: Mapping[str, int]\n    groups = 0\n    pattern: AnyStr\n\n    def search(self, string: AnyStr, pos: int = ...,\n               endpos: int = ...) -> Optional[Match[AnyStr]]: ...\n    def match(self, string: AnyStr, pos: int = ...,\n              endpos: int = ...) -> Optional[Match[AnyStr]]: ...\n    # New in Python 3.4\n    def fullmatch(self, string: AnyStr, pos: int = ...,\n                  endpos: int = ...) -> Optional[Match[AnyStr]]: ...\n    def split(self, string: AnyStr, maxsplit: int = ...) -> list[AnyStr]: ...\n    def findall(self, string: AnyStr, pos: int = ...,\n                endpos: int = ...) -> list[Any]: ...\n    def finditer(self, string: AnyStr, pos: int = ...,\n                 endpos: int = ...) -> Iterator[Match[AnyStr]]: ...\n\n    @overload\n    def sub(self, repl: AnyStr, string: AnyStr,\n            count: int = ...) -> AnyStr: ...\n    @overload\n    def sub(self, repl: Callable[[Match[AnyStr]], AnyStr], string: AnyStr,\n            count: int = ...) -> AnyStr: ...\n\n    @overload\n    def subn(self, repl: AnyStr, string: AnyStr,\n             count: int = ...) -> Tuple[AnyStr, int]: ...\n    @overload\n    def subn(self, repl: Callable[[Match[AnyStr]], AnyStr], string: AnyStr,\n             count: int = ...) -> Tuple[AnyStr, int]: ...\n\n# Functions\n\ndef get_type_hints(obj: Callable, globalns: Optional[dict[str, Any]] = ...,\n                   localns: Optional[dict[str, Any]] = ...) -> dict[str, Any]: ...\n\n@overload\ndef cast(tp: Type[_T], obj: Any) -> _T: ...\n@overload\ndef cast(tp: str, obj: Any) -> Any: ...\n\n# Type constructors\n\n# NamedTuple is special-cased in the type checker\nclass NamedTuple(tuple):\n    _field_types: collections.OrderedDict[str, Type[Any]]\n    _field_defaults: Dict[str, Any] = ...\n    _fields: Tuple[str, ...]\n    _source: str\n\n    def __init__(self, typename: str, fields: Iterable[Tuple[str, Any]] = ..., *,\n                 verbose: bool = ..., rename: bool = ..., **kwargs: Any) -> None: ...\n\n    @classmethod\n    def _make(cls: Type[_T], iterable: Iterable[Any]) -> _T: ...\n\n    def _asdict(self) -> collections.OrderedDict[str, Any]: ...\n    def _replace(self: _T, **kwargs: Any) -> _T: ...\n\ndef NewType(name: str, tp: Type[_T]) -> Type[_T]: ...\n\n# This itself is only available during type checking\ndef type_check_only(func_or_cls: _C) -> _C: ...\n"
+    }
+  }
+}
+
+2019-05-12 14:46:40 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/didClose",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/anaconda3/envs/d/lib/pyre_check/typeshed/stdlib/3/typing.pyi"
+    }
+  }
+}
+
+2019-05-12 14:46:40 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 37,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 100, "character": 22 }
+  }
+}
+
+2019-05-12 14:46:40 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 37 } }
+
+2019-05-12 14:46:41 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 37,
+  "result": {
+    "contents": "typing._SpecialForm",
+    "range": {
+      "start": { "line": 100, "character": 19 },
+      "end": { "line": 100, "character": 24 }
+    }
+  }
+}
+
+2019-05-12 14:46:41 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 38,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 115, "character": 13 }
+  }
+}
+
+2019-05-12 14:46:41 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 38 } }
+
+2019-05-12 14:46:41 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 38,
+  "result": {
+    "contents": "object",
+    "range": {
+      "start": { "line": 115, "character": 11 },
+      "end": { "line": 115, "character": 14 }
+    }
+  }
+}
+
+2019-05-12 14:46:41 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 39,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 116, "character": 14 }
+  }
+}
+
+2019-05-12 14:46:41 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 39,
+  "result": {
+    "contents": "typing.Tuple[unknown, unknown]",
+    "range": {
+      "start": { "line": 116, "character": 11 },
+      "end": { "line": 116, "character": 19 }
+    }
+  }
+}
+
+2019-05-12 14:46:50 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 40,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 101, "character": 39 }
+  }
+}
+
+2019-05-12 14:46:50 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 40,
+  "result": {
+    "contents":
+      "typing_extensions.Literal[' Get data from the text files and convert them to trainable data\n    Returns:\n        Vectorize data elements\n    ']",
+    "range": {
+      "start": { "line": 101, "character": 4 },
+      "end": { "line": 104, "character": 7 }
+    }
+  }
+}
+
+2019-05-12 14:46:50 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 40 } }
+
+2019-05-12 14:46:50 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 41,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 100, "character": 30 }
+  }
+}
+
+2019-05-12 14:46:51 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 41 } }
+
+2019-05-12 14:46:51 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 41,
+  "result": {
+    "contents": "typing.TypeAlias",
+    "range": {
+      "start": { "line": 100, "character": 30 },
+      "end": { "line": 100, "character": 34 }
+    }
+  }
+}
+
+2019-05-12 14:46:53 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 42,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 100, "character": 38 }
+  }
+}
+
+2019-05-12 14:46:53 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 42 } }
+
+2019-05-12 14:46:53 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 42, "result": null }
+
+2019-05-12 14:46:53 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 43,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 100, "character": 36 }
+  }
+}
+
+2019-05-12 14:46:53 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 43,
+  "result": {
+    "contents": "typing.Type[int]",
+    "range": {
+      "start": { "line": 100, "character": 35 },
+      "end": { "line": 100, "character": 38 }
+    }
+  }
+}
+
+2019-05-12 14:46:53 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 44,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 100, "character": 35 }
+  }
+}
+
+2019-05-12 14:46:54 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 44,
+  "result": {
+    "contents": "typing.Type[int]",
+    "range": {
+      "start": { "line": 100, "character": 35 },
+      "end": { "line": 100, "character": 38 }
+    }
+  }
+}
+
+2019-05-12 14:46:55 INFO LSP message received:
+{ "jsonrpc": "2.0", "method": "$/cancelRequest", "params": { "id": 44 } }
+
+2019-05-12 14:46:55 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/didSave",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py",
+      "version": 14
+    }
+  }
+}
+
+2019-05-12 14:46:55 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/publishDiagnostics",
+  "params": {
+    "uri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py",
+    "diagnostics": [
+      {
+        "range": {
+          "start": { "line": 91, "character": 52 },
+          "end": { "line": 91, "character": 60 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Incompatible parameter type [6]: Expected `List[str]` for 1st parameter `sentence` to call `src.preprocess.extract.sentence_to_index` but got `str`."
+      },
+      {
+        "range": {
+          "start": { "line": 8, "character": 0 },
+          "end": { "line": 8, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `numpy`."
+      },
+      {
+        "range": {
+          "start": { "line": 7, "character": 0 },
+          "end": { "line": 7, "character": 23 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow`."
+      }
+    ]
+  }
+}
+
+2019-05-12 14:46:55 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/publishDiagnostics",
+  "params": {
+    "uri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/modelling/train.py",
+    "diagnostics": [
+      {
+        "range": {
+          "start": { "line": 22, "character": 14 },
+          "end": { "line": 22, "character": 19 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined name [18]: Global name `tensorflow` is not defined, or there is at least one control flow path that doesn't define `tensorflow`."
+      },
+      {
+        "range": {
+          "start": { "line": 8, "character": 0 },
+          "end": { "line": 8, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `numpy`."
+      },
+      {
+        "range": {
+          "start": { "line": 7, "character": 0 },
+          "end": { "line": 7, "character": 44 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow.keras.optimizers`."
+      },
+      {
+        "range": {
+          "start": { "line": 6, "character": 0 },
+          "end": { "line": 6, "character": 54 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow.keras.callbacks`."
+      },
+      {
+        "range": {
+          "start": { "line": 5, "character": 0 },
+          "end": { "line": 5, "character": 41 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow.keras.models`."
+      },
+      {
+        "range": {
+          "start": { "line": 4, "character": 0 },
+          "end": { "line": 4, "character": 78 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow.keras.layers`."
+      }
+    ]
+  }
+}
+
+2019-05-12 14:46:55 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/publishDiagnostics",
+  "params": {
+    "uri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py",
+    "diagnostics": [
+      {
+        "range": {
+          "start": { "line": 91, "character": 52 },
+          "end": { "line": 91, "character": 60 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Incompatible parameter type [6]: Expected `List[str]` for 1st parameter `sentence` to call `src.preprocess.extract.sentence_to_index` but got `str`."
+      },
+      {
+        "range": {
+          "start": { "line": 8, "character": 0 },
+          "end": { "line": 8, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `numpy`."
+      },
+      {
+        "range": {
+          "start": { "line": 7, "character": 0 },
+          "end": { "line": 7, "character": 23 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow`."
+      }
+    ]
+  }
+}
+
+2019-05-12 14:46:56 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 45,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 106, "character": 16 }
+  }
+}
+
+2019-05-12 14:46:56 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "id": 45,
+  "result": {
+    "contents": "typing.TypeAlias",
+    "range": {
+      "start": { "line": 106, "character": 14 },
+      "end": { "line": 106, "character": 18 }
+    }
+  }
+}
+
+2019-05-12 14:47:10 INFO LSP message sent:
+{
+  "jsonrpc": "2.0",
+  "method": "textDocument/publishDiagnostics",
+  "params": {
+    "uri":
+      "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py",
+    "diagnostics": [
+      {
+        "range": {
+          "start": { "line": 91, "character": 52 },
+          "end": { "line": 91, "character": 60 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Incompatible parameter type [6]: Expected `List[str]` for 1st parameter `sentence` to call `src.preprocess.extract.sentence_to_index` but got `str`."
+      },
+      {
+        "range": {
+          "start": { "line": 8, "character": 0 },
+          "end": { "line": 8, "character": 18 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `numpy`."
+      },
+      {
+        "range": {
+          "start": { "line": 7, "character": 0 },
+          "end": { "line": 7, "character": 23 }
+        },
+        "severity": 1,
+        "source": "Pyre",
+        "message":
+          "Undefined import [21]: Could not find a module corresponding to import `tensorflow`."
+      }
+    ]
+  }
+}
+
+2019-05-12 14:47:20 INFO LSP message received:
+{
+  "jsonrpc": "2.0",
+  "id": 46,
+  "method": "textDocument/hover",
+  "params": {
+    "textDocument": {
+      "uri":
+        "file:///Users/heiseish/Projects/DLPlayground/DawnIntentClassification/src/preprocess/extract.py"
+    },
+    "position": { "line": 7, "character": 7 }
+  }
+}
+
+2019-05-12 14:47:20 INFO LSP message sent:
+{ "jsonrpc": "2.0", "id": 46, "result": null }
+
+2019-05-12 14:49:43 ERROR Uncaught exception (exception: End_of_file, exception backtrace: Raised at file "pervasives.ml", line 440, characters 14-31
+Called from file "src/in_channel.ml", line 24, characters 25-31
+Re-raised at file "server/language_server/protocol.ml" (inlined), line 270, characters 14-31
+Called from file "server/language_server/protocol.ml", line 274, characters 2-54
+Called from file "command/persistentCommand.ml", line 72, characters 9-62
+Called from file "list.ml", line 100, characters 12-15
+Called from file "src/list0.ml" (inlined), line 26, characters 40-75
+Called from file "command/persistentCommand.ml", line 90, characters 8-40
+Called from file "command/persistentCommand.ml", line 159, characters 7-32
+, exception origin: persistent, fatal: true)
+Uncaught exception:
+  
+  End_of_file
+
